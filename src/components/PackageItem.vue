@@ -1,20 +1,30 @@
 <template>
-  <footer class="footer flex-shrink-0 border-top bg-light p-3">
-    <div class="row">
-      <div class="col-md-6">
-        <div class="text-muted">Name:</div>
-        <div>Vladyslav Bondarenko</div>
-      </div>
-      <div class="col-md-6 mt-3 mt-md-0">
-        <div class="text-muted">Links:</div>
-        <a href="https://github.com/bvlad05" target="_blank"><i class="fab fa-github" /></a>
-      </div>
+  <div class="card">
+    <div class="card-body">
+      <h4 v-text="packageItem.name" />
+      <p v-text="packageItem.description" />
+      <button class="btn btn-outline-info btn-sm mt-2" @click="openPackageModal">
+        Details
+      </button>
     </div>
-  </footer>
+  </div>
 </template>
 
 <script>
+import eventBus from '../eventBus';
+
 export default {
-  name: 'AppFooter',
+  name: 'PackageItem',
+  props: {
+    packageItem: {
+      type: Object,
+      required: true,
+    },
+  },
+  methods: {
+    openPackageModal() {
+      eventBus.$emit('open-package-modal', this.packageItem);
+    },
+  },
 };
 </script>

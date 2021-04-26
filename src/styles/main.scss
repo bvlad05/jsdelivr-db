@@ -1,0 +1,23 @@
+@import "~bootstrap/scss/bootstrap";
+$fa-font-path: '/webfonts';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/brands';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  height: 100%;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  color: #333;
+  line-height: 1.6;
+  font-size: 1rem;
+  overflow-x: hidden;
+  position: relative;
+  min-width: 320px;
+  font-weight: 400;
+  background-color: #eee;
+}
