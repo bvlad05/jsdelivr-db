@@ -68,7 +68,6 @@ export default {
   data() {
     return {
       currentPage: 1,
-      packageModalVisibility: true,
       packageLoading: false,
     };
   },
